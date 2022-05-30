@@ -7,7 +7,9 @@ import { Person } from './model/person';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-
-  person:Person ={ name : 'Ramana Reddy', gender: 'Male', address : 'Hyderabad'  }
- 
+  person: Person = {
+    name: 'Ramana Reddy',
+    gender: 'Male',
+    address: 'Hyderabad',
+  };
 }

@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Comp1Component } from './comp1/comp1.component';
+import { TextPipe } from '../text.pipe';
+
 
 
 @NgModule({
   declarations: [
-    Comp1Component
+    TextPipe
   ],
   imports: [
     CommonModule
   ],
-  exports:[
-    Comp1Component
-  ]
+  exports:[TextPipe]
 })
-export class ExtraModule { }
+export class TestModule { }

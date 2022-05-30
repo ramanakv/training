@@ -3,21 +3,29 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { EmpDataComponent } from './emp-data/emp-data.component';
+import { ColorChangeDirective } from './color-change.directive';
+import { DirectivesComponent } from './directives/directives.component';
+import { TextchangeDirective } from './textchange.directive';
+import { SqrtPipe } from './sqrt.pipe';
+import { TestModule } from './test/test.module';
 
-import { ExtraModule } from './extra/extra.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmpDataComponent
+    DirectivesComponent,
+    TextchangeDirective,
+    ColorChangeDirective,
+    SqrtPipe
   ],
   imports: [
     BrowserModule,
-    ExtraModule,
-    FormsModule
+    FormsModule,
+    TestModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
