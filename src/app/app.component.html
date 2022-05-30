@@ -1,0 +1,23 @@
+<h2>This is main component</h2>
+
+<input type="text" [(ngModel)]="person.name" />
+<div>
+  <input type="radio" name="gen" value="Male" [(ngModel)]="person.gender" />Male<br />
+  <input
+    type="radio"
+    name="gen"
+    value="Female"
+    [(ngModel)]="person.gender"
+  />Female<br />
+</div>
+<select [(ngModel)]="person.address">
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Kolkotta">Kolkotta</option>
+    
+</select>
+<p>Name: {{ person.name }}</p>
+<p>Gender: {{ person.gender }}</p>
+<p>Address: {{person.address}}</p>
+<p>{{person|json}}</p>
