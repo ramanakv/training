@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-person',
-  templateUrl: './person.component.html',
-  styleUrls: ['./person.component.css']
+  selector: 'form-no-validate',
+  templateUrl: './form.novalidate.component.html',
+  styles: []
 })
-export class PersonComponent {
+export class FormNoValidateComponent {
 
   constructor() { }
   personForm = new FormGroup({
