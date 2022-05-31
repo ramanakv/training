@@ -1,0 +1,15 @@
+<div class="container col-4">
+  <h3>List of Persons</h3>
+  <ul class="list-group">
+    <li
+      class="list-group-item"
+      *ngFor="let p of persons; let i = index"
+      (click)="selectPerson(i)"
+    >
+      {{ p.name }}
+    </li>
+  </ul>
+  <div *ngIf="selectedPerson">
+    <person-details [person]="selectedPerson" (dismiss)="hideChild($event)"></person-details>
+  </div>
+</div>
