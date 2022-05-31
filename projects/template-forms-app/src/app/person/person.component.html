@@ -1,0 +1,26 @@
+<div class='container' style='width:500px'>
+  <form #form="ngForm" (submit)=submitForm(form.value)>
+
+    <div class='form-group'>
+      <label for="id_name">Name</label>
+      <input id='id_name' type="text" required minlength='5' name='name' class="form-control" ngModel
+        #name='ngModel' />
+      <div class='alert alert-danger' *ngIf='name.touched && name.invalid'>
+        <div *ngIf=' name.errors && name.errors["required"]'>name required</div>
+        <div *ngIf='name.errors && name.errors["minlength"]'>Minimum length</div>
+      </div>
+    </div>
+    <div class=‘radio’>
+      <label> <input type="radio" ngModel name="gender"  value='M'>Male </label>
+      <label> <input type="radio" ngModel name="gender"  value='F'>Female </label>
+   </div> 
+   <div class='form-group'>
+    <label for="id_address">Address</label>
+    <input id='id_address' type="text"  name='address' class="form-control" ngModel />
+  
+  </div>
+    <button type='submit' class='btn btn-primary' [disabled]='form.invalid'>Submit</button>
+
+    <div>{{form.value|json}}</div>
+  </form>
+</div>

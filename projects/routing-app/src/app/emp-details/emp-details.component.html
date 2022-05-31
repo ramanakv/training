@@ -1,0 +1,15 @@
+<div *ngIf="emp != null; else noemp">
+    <H3>Employee Details</H3>
+
+    <h3>Employee Id: {{emp.empid}}</h3>
+    <h3>Name: {{emp.name}}</h3>
+    <h3>Salary: {{emp.salary}}</h3>
+    
+</div>
+
+<ng-template #noemp>
+    <h4>No such Employee with the given Id {{selectedId}}</h4>
+</ng-template>
+<div>
+    <button (click)="goBack()">Back</button>
+</div>

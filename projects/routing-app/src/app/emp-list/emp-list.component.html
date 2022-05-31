@@ -1,0 +1,7 @@
+
+<H2>Employee List</H2>
+
+<div *ngFor="let e of empList">
+    <a [routerLink]="['get',e.empid]" >{{e.name}}</a>
+</div>
+<router-outlet></router-outlet>

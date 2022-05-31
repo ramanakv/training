@@ -1,0 +1,42 @@
+<div class='container' style='width:500px'>
+  <form [formGroup]='contactForm' (submit)='submitForm()'>
+
+    <div class='form-group'>
+      <label for="id_country">Name</label>
+    
+      <input  type="text" formControlName='name' class="form-control" />
+      <div class='alert alert-danger' *ngIf="contactForm.get('name').touched && contactForm.get('name').invalid">
+        <div *ngIf="contactForm.get('name').errors.required">name required</div>
+        <div *ngIf="contactForm.get('name').errors.minlength">Name should be minimum 5 characters</div>
+      </div>
+    </div>
+    <div class=‘radio’>
+      <label> <input type="radio" formControlName="gender"  value='M'>Male </label>
+      <label> <input type="radio" formControlName="gender"  value='F'>Female </label>
+   </div> 
+   
+    <div class='form-group'>
+      <label for="id_country">Country</label>
+      <select id='id_country' formControlName='country' class="form-control" (change)='getCities(contactForm.get("country").value)' >
+        <option></option>
+        <option *ngFor="let c of countries" [value]='c.id'>{{c.name}}</option>
+      </select>
+      <div class='alert alert-danger' *ngIf="contactForm.get('country').touched && contactForm.get('country').invalid">
+        Select one country
+      </div>
+    </div>
+    <div class='form-group'>
+      <label for="id_city">City</label>
+      <select id='id_city' formControlName='city' class="form-control" >
+        <option></option>
+        <option *ngFor="let c of cities" [value]='c.id'>{{c.name}}</option>
+      </select>
+      <div class='alert alert-danger' *ngIf="contactForm.get('city').touched && contactForm.get('city').invalid">
+        Select one city
+      </div>
+    </div>
+    <button type='submit' class='btn btn-primary' [disabled]='contactForm.invalid'>Submit</button>
+
+    <div>{{contactForm.value|json}}</div>
+  </form>
+</div>
