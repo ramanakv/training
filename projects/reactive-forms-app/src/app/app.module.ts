@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import { FormNoValidateComponent } from './form/form-novalidate.component';
 import { FormValidateComponent } from './form/form.validate.component';
+import { SingleFieldComponent } from './single-field/single-field.component';
 
 
 
@@ -12,7 +13,8 @@ import { FormValidateComponent } from './form/form.validate.component';
   declarations: [
     AppComponent,
     FormValidateComponent,
-    FormNoValidateComponent
+    FormNoValidateComponent,
+    SingleFieldComponent
   ],
   imports: [
     BrowserModule,
