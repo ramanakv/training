@@ -11,6 +11,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { EmpDetailsComponent } from './emp-details/emp-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { FormsModule } from '@angular/forms';
     EmpListComponent,
     AboutComponent,
     NotFoundComponent,
-    EmpDetailsComponent
+    EmpDetailsComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

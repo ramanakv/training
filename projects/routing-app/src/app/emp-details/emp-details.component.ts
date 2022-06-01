@@ -30,6 +30,6 @@ export class EmpDetailsComponent implements OnInit {
   }
 
   goBack(): void {
-    this.route.navigate(['/emplist']);
+    this.route.navigate(['']);
   }
 }

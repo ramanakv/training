@@ -1,15 +1,16 @@
 <div *ngIf="emp != null; else noemp">
-    <H3>Employee Details</H3>
+    <h5>Employee Details</h5>
 
-    <h3>Employee Id: {{emp.empid}}</h3>
-    <h3>Name: {{emp.name}}</h3>
-    <h3>Salary: {{emp.salary}}</h3>
+    <p>Employee Id: {{emp.empid}}</p>
+    <p>Name: {{emp.name}}</p>
+    <p>Salary: {{emp.salary}}</p>
     
 </div>
 
 <ng-template #noemp>
     <h4>No such Employee with the given Id {{selectedId}}</h4>
 </ng-template>
+
 <div>
-    <button (click)="goBack()">Back</button>
+    <button class='btn btn-danger' (click)="goBack()">Back</button>
 </div>

@@ -1,0 +1,9 @@
+
+<div class="container">
+
+    <p> User name <input type='text' [(ngModel)]='name'></p>
+    <p> Password <input type='password' [(ngModel)]='password'></p>
+    <button class="btn btn-primary" (click)="login()">Login</button>
+    <br>
+    <p *ngIf="message !=''">{{message}}</p>
+</div>

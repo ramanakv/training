@@ -11,14 +11,13 @@ import { EmployeeService } from '../employee.service';
 export class EmpListComponent implements OnInit {
 
   constructor(private empService:EmployeeService) { }
-  
+
 
   empList:Employee[] = [];
   
 
   ngOnInit() {
-     this.empList = this.empService.getAllEmployees();
-    
+     this.empList = this.empService.getAllEmployees(); 
   }
 
 }

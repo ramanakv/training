@@ -1,7 +1,12 @@
-
 <H2>Employee List</H2>
-
-<div *ngFor="let e of empList">
-    <a [routerLink]="['get',e.empid]" >{{e.name}}</a>
+<div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let e of empList">
+      <a [routerLink]="['get', e.empid]">{{ e.name }}</a>
+    </li>
+  </ul>
 </div>
-<router-outlet></router-outlet>
+<div>
+  <router-outlet></router-outlet>
+
+</div>
