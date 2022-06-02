@@ -1,0 +1,54 @@
+<div class="row">
+<div class="col-3">
+  <h5>Create New Employee</h5>
+  <form #form="ngForm" (submit)="save(form.value)">
+    <div class="form-group">
+      <label for="id_name">Emp Id</label>
+      <input id="id_name" type="text" name="id" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" name="name" class="form-control" ngModel />
+    </div>
+    <div class="form-group">
+      <label>Salary</label>
+      <input type="number" name="salary" class="form-control" ngModel />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+
+<div class="col-3">
+  <h5>LIst of Employees</h5>
+  
+    <ul class="'list-group">
+      <li class="list-group-item" *ngFor="let e of obs|async">
+        {{ e.name }}
+        <span
+          class="badge bg-primary"
+          style="float: right; cursor: pointer"
+          (click)="showDetails(e.id)"
+          >Details</span
+        >
+        <span
+          class="badge bg-danger"
+          style="float: right; cursor: pointer"
+          (click)="delete(e.id)"
+          >Delete</span
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div
+    class="col-3"
+    style="border: 2px solid blue; border-radius: 5px; float: left"
+    *ngIf="selectedEmp != null"
+  >
+    <p>Emp Id: {{ selectedEmp.id }}</p>
+    <p>Name: {{ selectedEmp.name }}</p>
+    <p>Salary: {{ selectedEmp.salary }}</p>
+    <button class="btn btn-danger" (click)="selectedEmp = null">Hide</button>
+  </div>
+</div>
+
