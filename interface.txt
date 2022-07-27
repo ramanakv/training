@@ -12,6 +12,7 @@ interfaces
 		void show();                           //implicitly public and abstract
 		int add(int x, int y);               // implicitly public and abstract
 		float val =100.0f;					// implicitly public final and static
+		
 	}
 	
 	public class Test implemets Sample{
@@ -20,6 +21,9 @@ interfaces
 	public Other implements Sample{
 	 int add(int x, int y){
 	        return x+y;
+	   }
+	   public void show(){
+	   // some code
 	   }
 	}
 	
