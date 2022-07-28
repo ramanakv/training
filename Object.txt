@@ -1,0 +1,44 @@
+Object class:
+=============
+
+java provides a class whose name is Object  in java.lang package
+
+Object is super class for all objects in java
+
+    class Hello{ }         is coverted by the compiler to
+  
+      class Hello extends java.lang.Object {
+	   }
+	  
+Methods of Object class are available in every class of java
+
+Methods:
+     notify(), wait(), notifyAll()   <-- related multithread programs
+	 
+	 boolean equals(Object o)    <-- used to compare objects
+	 String toString()  <-- used to convert object data into a single string
+	 int hashCode()   <-- generate hashCode for the object (used in collections)
+	 
+hashCode()
+     used to generate a unique integer for an object
+	 this method required when we store objects in HashSet(will come later in collections)
+	 
+toString()
+     used to convert object data to a string
+	 this method is called when we use   System.out.println(e1)
+	 this method in Object simply reurns classname@hashcode which is useless
+	 we need to override this method to get meaningful output
+	 
+equals()
+	used to compare data of objects
+	direct comparison of objects with == compares only references.
+	to compare primitives == sign is suitable as we are comparing values of primitives
+	
+	To compare objects, we have to use equals() method defined in Object class
+	method of Object class comapres references which is not correct
+	so, we need to override this method
+	
+
+
+
+	 
