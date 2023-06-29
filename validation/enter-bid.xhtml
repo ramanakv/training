@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:body>
+
+        <h2>Enter Bid</h2>
+
+        <h:form>
+            <h:messages style='color:red'/>
+            <table>
+                <tr>
+                    <td>User ID: </td>
+                    <td>  <h:inputText value="#{bidBean.userID}" 
+                                       required="true"
+                                       requiredMessage="You must enter a user ID"
+                                       validatorMessage="ID must be 5 or 6 chars"
+                                       id="userID">
+                            <f:validateLength minimum="3" maximum="5"/></h:inputText></td>
+                    <td><h:message for='userID' style='color:red'/></td></tr>
+                <tr>
+
+                    <td>Bid Amount: </td>
+                    <td><h:inputText value="#{bidBean.bidAmount}"
+                                     required="true"
+                                     requiredMessage="You must enter an amount"
+                                     converterMessage="Amount must be a number"
+                                     id="amount"/></td>
+                    <td><h:message for='amount' style='color:red'/></td></tr>
+                <tr>
+                    <td>Duration:</td>
+                    <td>    <h:inputText value="#{bidBean.bidDuration}" 
+                                         required="true"
+                                         requiredMessage="You must enter a duration"
+                                         converterMessage="Duration must be a whole number"
+                                         id="duration"/>
+                    </td>
+                    <td><h:message for='duration' style='color:red'/></td></tr>
+                <tr><td colspan="3">
+                        <h:commandButton value="Send Bid" 
+                                         action="#{bidBean.doBid}"/></td></tr>
+            </table>
+        </h:form>
+
+    </h:body>
+</html>

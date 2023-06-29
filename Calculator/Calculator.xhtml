@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+        <title>JSF Calculator Application</title>
+    </head>
+    <body>
+        <f:view>
+            <h:form id="calcForm">
+                <h4>Calculator Application</h4>
+                <h:panelGrid columns="3">
+
+                    <h:outputLabel value="First Number" for="firstNumber"/>
+                    <h:inputText id="firstNumber" label="First Number"
+                                 value="#{calculator.firstNumber}" required="true"
+                                 requiredMessage="required" converterMessage="not a valid number"/>
+                    <h:message for="firstNumber"  style="color:red"/>
+
+                    <h:outputLabel value="Second Number" for="secondNumber"/>
+                    <h:inputText id="secondNumber" label="Second Number"
+                                 value="#{calculator.secondNumber}" required="true"
+                                 requiredMessage="required" converterMessage="not a valid number"/>
+                    <h:message for="secondNumber" style="color:red"/>
+                </h:panelGrid>
+                <h:outputLabel value="#{calculator.error}" style="color:red"/>
+                <div>
+                    <h:commandButton action="#{calculator.add}" value="Add"/>
+
+                    <h:commandButton action="#{calculator.multiply}" value="Multiply"/>
+
+                    <h:commandButton action="#{calculator.clear}" value="Clear"
+                                     immediate="true"/>
+                </div>
+            </h:form>
+        </f:view>
+    </body>
+</html>
