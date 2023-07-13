@@ -63,7 +63,7 @@ function sendMessage() {
 //This function performs a notmal socket closure
 //Once Socket is closed, an onclose event handler function that was registered for this socket will reset the page and display the alert
 function leaveChat() {
-    socket.close(1000);
+    socket.close();
 }
 
 
