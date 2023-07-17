@@ -1,0 +1,40 @@
+All annotations are ignored if annotation-config is not in xml file
+
+@Autowired
+		used for autowiring by type
+		
+@Qualifier
+		used along with Autowired if more than one bean are available for the same type
+
+@Required
+		used on setter method to check that this property is must
+		
+@Component
+		used at class level
+		identifies this class as a bean
+		if no name is given bean id will be class name with first letter in lowercase
+		if name is given , that name is bean id
+			Example:  @Component("hello")
+
+@Service  -- same as @Component
+@Repository  -- same as @Component
+			
+@Configuration
+		used on class creating beans
+		the class should have methods returning bean objects
+		these methods should have @Bean annotation
+		
+@Scope
+		used to define scope
+		Example:
+				@Scope("prototype")
+				
+@PostConstruct
+		used on a method which is identified as init-method
+		this annotation belongs to JavaEE
+		JavaEE APi dependency required
+		
+@PreDestroy
+		used for a method which is identified as destroy-method
+		this annotation belongs to JavaEE
+		JavaEE APi dependency required
