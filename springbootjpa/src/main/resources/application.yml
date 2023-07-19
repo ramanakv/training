@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:mysql://localhost/ramanadb
-    username: root
-    password: rasaspsi
-    driver-class-name: com.mysql.jdbc.Driver
