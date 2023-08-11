@@ -1,0 +1,58 @@
+
+web.xml
+
+
+    <security-constraint>
+        <display-name>Constraint1</display-name>
+        <web-resource-collection>
+            <web-resource-name>adminresource</web-resource-name>
+            <description/>
+            <url-pattern>/admin</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>adminrole</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>Constraint2</display-name>
+        <web-resource-collection>
+            <web-resource-name>normalResources</web-resource-name>
+            <description/>
+            <url-pattern>/normal</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>adminrole</role-name>
+            <role-name>userrole</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+
+
+    <security-role>
+        <description/>
+        <role-name>adminrole</role-name>
+    </security-role>
+    <security-role>
+        <description/>
+        <role-name>userrole</role-name>
+    </security-role>
+
+
+   <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>myrealm</realm-name>
+    </login-config>
+
+Weblogic.xml
+
+<security-role-assignment>
+        <role-name>adminrole</role-name>
+        <principal-name>admingroup</principal-name>
+    </security-role-assignment>
+    <security-role-assignment>
+        <role-name>userrole</role-name>
+        <principal-name>admingroup</principal-name>
+        <principal-name>usergroup</principal-name>
+    </security-role-assignment>	
