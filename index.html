@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' type='text/css' href='styles/chat.css'>
+        <script type="text/javascript" src="js/chat.js"></script> 
+        <title>Chat</title>
+    </head>
+    <body>
+        <header class='header'>Chat</header>
+        <section class='content'>                   
+
+            <div class="field">
+                <label for="name">Your Name: </label><input type="text" id="name" >
+            </div>
+            <div class="field">
+                <label for="msg">Message:</label><input type="text" id="msg" disabled>
+            </div>
+            <div class="field">
+                <input type="button" id="join" value="Join" onclick="joinChat()">
+                <input type="button" id="send" value="Send" onclick="sendMessage()" disabled>
+                <input type="button" id="leave" value="Leave" onclick="leaveChat()" disabled>
+            </div>
+            <br>
+            <div class="field"  id="chat"></div>
+        </section>
+        <footer class='footer'>Join, Send, Leave</footer>
+    </body>
+</html>
