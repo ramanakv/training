@@ -1,6 +1,6 @@
 
 web.xml
-
+---------
 
     <security-constraint>
         <display-name>Constraint1</display-name>
@@ -46,6 +46,7 @@ web.xml
     </login-config>
 
 Weblogic.xml
+---------------
 
 <security-role-assignment>
         <role-name>adminrole</role-name>
