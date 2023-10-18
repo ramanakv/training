@@ -1,0 +1,92 @@
+Stream collect operations
+========================
+
+      collect(  operations as to how to collect objects)
+
+
+Collectors class
+		contains lot of static methods
+		
+1		to collect into List							Collectors.toList()
+	
+	List<Employee> dept10List =
+				
+		list.stream()   
+		.filter(e-> e.getDeptId() ==10)
+		.collect(Collectors.toList());
+		
+		for(Employee e: dept10List)
+			System.out.println(e);
+==============================================================================
+2		to calculate sum of salary   				Collectors.summingDouble(e->e.getSalary())
+
+	
+		double totSalary =
+				
+		list.stream()   
+		.collect(Collectors.summingDouble(Employee::getSalary));
+		
+		System.out.println(totSalary);
+==================================================================================
+3		to calculate average							Collectors.averagingDouble(e->e.getSalary())
+
+	
+		double avgSalary =
+				
+		list.stream()   
+		.collect(Collectors.aveargingDouble(Employee::getSalary));
+		
+		System.out.println(avgSalary);
+======================================================================================
+4		to concatenate String values				Collectors.joining(", ")
+
+	String allNames=
+				
+		list.stream()  
+		.map(Employee::getName)
+		.collect(Collectors.joining(", "));
+		
+		System.out.println(allNames);
+		
+=======================================================================================		
+5		to make groups based on a field		Collectors.groupingBy(e->e.getDeptId())  --> creates a Map with deptId as key, List<Employee> as value
+																			
+Map<Integer,  List<Employee> >  map =
+			list.stream()  
+           .collect(Collectors.groupingBy(Employee::getDeptId));
+		
+		map.forEach(  (k,v) -> { System.out.println("Employees in Dept Id: "+ k );
+								v.forEach(System.out::println);
+								}
+		);																			
+
+=============================================================================================		
+
+6    to generate total on groups				Collectors.groupingBy(e->e.getDeptId(),  	Collectors.summingDouble(e->e.getSalary()))
+																	--> generates a Map with deptId as key and totalsalary as value
+		Map<Integer, Double >  map =
+				
+		list.stream()  
+		.collect(Collectors.groupingBy(Employee::getDeptId, Collectors.summingDouble(Employee::getSalary)));
+		
+		map.forEach(  (k,v) ->  System.out.println("Dept Id: "+ k  + "   Total salary: "+v ) );
+================================================================================================		
+7		to generate average on groups			Collectors.groupingBy(e->e.getDeptId(),  	Collectors.averagingDouble(e->e.getSalary()))
+																			--> generates a Map with deptId as key and averagesalary as value
+		Map<Integer, Double >  map =
+				
+		list.stream()  
+		.collect(Collectors.groupingBy(Employee::getDeptId, Collectors.averaginDouble(Employee::getSalary)));
+		
+		map.forEach(  (k,v) ->  System.out.println("Dept Id: "+ k  + "   Avg Salary: "+v ) );
+===================================================================================================
+																			
+8		to generate count on groups				Collectors.groupingBy(e->e.getDeptId(),  	Collectors.counting())
+																			--> generates a Map with deptId as key and totalsalary as value
+																			
+		Map<Integer, Long >  map =
+				
+		list.stream()  
+		.collect(Collectors.groupingBy(Employee::getDeptId, Collectors.counting()));
+		
+		map.forEach(  (k,v) ->  System.out.println("Dept Id: "+ k  + "   Emp Count: "+v ) );
