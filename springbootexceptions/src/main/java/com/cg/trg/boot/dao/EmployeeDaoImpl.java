@@ -3,14 +3,16 @@ package com.cg.trg.boot.dao;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
+import com.cg.trg.boot.dto.AppResponse;
 import com.cg.trg.boot.dto.Employee;
 import com.cg.trg.boot.exceptions.DuplicateEmployeeException;
+import com.cg.trg.boot.exceptions.EmployeeNotFoundException;
 
-
-
+@Service
 public class EmployeeDaoImpl implements EmployeeDao {
 
 	Map<Integer, Employee> data = new HashMap<Integer, Employee>();
@@ -23,9 +25,11 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public void save(Employee e) throws DuplicateEmployeeException {
-		if (data.containsKey(e.getEmpid()))
-			throw new DuplicateEmployeeException("Employee with id " + e.getEmpid() + " already exists");
+	public void save(Employee e) {
+		if (data.containsKey(e.getEmpid())) {
+			AppResponse resp = new AppResponse("SAVEFAIL", "Employee with id " + e.getEmpid() + " already exists");
+			throw new DuplicateEmployeeException(resp);
+		}
 		data.put(e.getEmpid(), e);
 
 	}
@@ -37,8 +41,9 @@ public class EmployeeDaoImpl implements EmployeeDao {
 			data.put(e.getEmpid(), e);
 			return true;
 		}
-		
-		return false;
+		AppResponse resp = new AppResponse("UPDFAIL", "Employee with id " + e.getEmpid() + " does not exist");
+		throw new EmployeeNotFoundException(resp);
+
 	}
 
 	@Override
@@ -47,13 +52,17 @@ public class EmployeeDaoImpl implements EmployeeDao {
 			data.remove(empId);
 			return true;
 		}
-		
-		return false;
+		AppResponse resp = new AppResponse("DELFAIL", "Employee with id " + empId + " does not exist");
+		throw new EmployeeNotFoundException(resp);
 	}
 
 	@Override
 	public Employee getEmployee(int empId) {
 		Employee x = data.get(empId);
+		if (x == null) {
+			AppResponse resp = new AppResponse("NOTFND", "Employee with id " + empId + " does not exist");
+			throw new EmployeeNotFoundException(resp);
+		}
 		return x;
 	}
 

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cg.trg.boot</groupId>
-	<artifactId>springbootRESTapp</artifactId>
+	<artifactId>springbootexceptions</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springbootRESTapp</name>
-	<description>Demo project for Spring Boot</description>
+	<name>springbootexceptions</name>
+	<description>Basic  project for Spring Boot with exception controller advice</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

@@ -10,8 +10,7 @@ public interface EmployeeService {
 	Employee getEmployee(int eid);
 	boolean deleteEmployee(int eid);
 	boolean grantIncrement(int eid, int percent);
-	
+	boolean updateEmployee(Employee e);
 	Collection<Employee> getAllEmployees();
-	Employee getYoungestEmployee();
 
 }

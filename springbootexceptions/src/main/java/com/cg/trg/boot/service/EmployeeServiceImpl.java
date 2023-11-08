@@ -2,22 +2,23 @@ package com.cg.trg.boot.service;
 
 import java.util.Collection;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.cg.trg.boot.dao.EmployeeDao;
 import com.cg.trg.boot.dto.Employee;
 import com.cg.trg.boot.exceptions.DuplicateEmployeeException;
 
+@Service
 public class EmployeeServiceImpl implements EmployeeService {
+	@Autowired
+	EmployeeDao dao;
 
-	EmployeeDao dao ;
-	
 	@Override
 	public boolean addEmployee(Employee e) {
-		try {
-			dao.save(e);
-			return true;
-		} catch (DuplicateEmployeeException e1) {
-			return false;
-		}
+		dao.save(e);
+		return true;
+
 	}
 
 	@Override
@@ -34,11 +35,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public boolean grantIncrement(int eid, int percent) {
 		Employee e = dao.getEmployee(eid);
-		if(e == null)
+		if (e == null)
 			return false;
-		int newSal = e.getSalary() +(int)( (float)e.getSalary()*percent/100);
+		int newSal = e.getSalary() + (int) ((float) e.getSalary() * percent / 100);
 		e.setSalary(newSal);
-		
+
 		return dao.update(e);
 
 	}
@@ -49,19 +50,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public Employee getYoungestEmployee() {
-		
-		Collection<Employee> allEmployees = dao.getAllEmployees();
-		Employee youngest = null;
-		for(Employee e: allEmployees ) {
-			
-			if (youngest == null)
-					youngest = e;
-			if(e.getDob().compareTo(youngest.getDob() ) > 0)
-				youngest = e;
-		}
-	
-		return youngest;
+	public boolean updateEmployee(Employee e) {
+		return dao.update(e);
 	}
 
 }

@@ -7,7 +7,7 @@ import com.cg.trg.boot.exceptions.DuplicateEmployeeException;
 
 public interface EmployeeDao {
 	
-	void save(Employee e)  throws DuplicateEmployeeException;
+	void save(Employee e);
 	boolean update(Employee e);
 	boolean delete(int empId);
 	Employee getEmployee(int empId);
