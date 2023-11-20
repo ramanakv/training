@@ -1,10 +1,10 @@
-package com.cg.sec;
+package com.cg;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Security5CrudMvcJpAauthenticationApplicationTests {
+class Security6CrudMvcJwtApplicationTests {
 
 	@Test
 	void contextLoads() {
