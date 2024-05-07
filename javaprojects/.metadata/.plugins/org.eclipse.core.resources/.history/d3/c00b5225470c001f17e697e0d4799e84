@@ -1,0 +1,38 @@
+package threadsproject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Main {
+
+	 public static void main(String[] args) throws InterruptedException {
+
+//       Thread.ofPlatform()
+//               .start(()->System.out.println("Platform Thread : "+Thread.currentThread()));
+//       System.out.println("------------------------------");
+//
+//       Thread.ofVirtual()
+//               .start(()->System.out.println("Virtual Thread : "+Thread.currentThread()));
+//   }
+
+       var start = System.currentTimeMillis();
+       var totalThread = 10000;
+       
+       List<Thread> list = new ArrayList<Thread>();
+       for(int i=0;i<10000;i++) {
+    	  list.add( Thread.ofVirtual().unstarted(()->{
+    		   System.out.println();
+    	   }));
+       }
+      
+
+       list.forEach(Thread::start);
+       for (Thread thread : list) {
+           thread.join();
+       }
+       var end = System.currentTimeMillis();
+       System.out.println("millis used to launch " + totalThread + "vthreads:" + (end - start) + "ms");
+   }
+}
+

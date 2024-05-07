@@ -1,0 +1,17 @@
+package com.sealed;
+
+public sealed class Rectangle extends Shape permits Square {
+
+	@Override
+	public double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getPerimeter() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

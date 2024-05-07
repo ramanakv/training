@@ -1,0 +1,24 @@
+package switchcaseproject;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+
+		showDayName(2);
+	}
+
+	static void showDayName(int day) {
+
+		String name = 
+		switch (day) { 
+		case  1 -> "Sunday";
+		case 2 -> "Monday";
+		default-> throw new RuntimeException("Invalid value");
+			
+		};
+		
+		System.out.println(name);
+
+	}
+
+}

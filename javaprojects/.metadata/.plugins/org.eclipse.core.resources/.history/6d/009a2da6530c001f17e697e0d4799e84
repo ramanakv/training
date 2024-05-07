@@ -1,0 +1,12 @@
+package com.inherit;
+
+public class ShapeMain {
+
+	public static void main(String[] args) {
+	Rectangle r = new Rectangle(12,10);
+	Circle c = new Circle(12.5);
+	Square s = new Square(12.5);
+
+	}
+
+}

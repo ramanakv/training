@@ -1,0 +1,9 @@
+package com.sealed;
+
+public non-sealed class Square extends Rectangle {
+	public Square() {
+		super(3.4,3.4);
+	}
+
+}
+

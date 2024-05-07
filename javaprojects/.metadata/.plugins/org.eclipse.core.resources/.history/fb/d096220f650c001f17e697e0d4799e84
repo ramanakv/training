@@ -1,0 +1,35 @@
+package com.main;
+
+import java.util.ServiceLoader;
+
+import com.entity.Employee;
+import com.service.EmployeeService;
+
+public class ConsumerMain {
+
+	public static void main(String[] args) {
+	
+		ServiceLoader<EmployeeService> loader = ServiceLoader.load(EmployeeService.class);
+
+		String type ="QUICK";
+		EmployeeService empService = null;
+		
+		for(EmployeeService s: loader) {
+			if(s.getType().equals(type)) {
+				empService = s;
+				break;
+			}
+		}
+		
+		if(empService == null) {
+			System.out.println("No service of the type "+ type + " available");
+			System.exit(0);
+		}
+		
+		Employee x = empService.getEmployee(100);
+		System.out.println(x);
+		
+		empService.saveEmployee(new Employee(886,"Armada",22000));
+	}
+
+}

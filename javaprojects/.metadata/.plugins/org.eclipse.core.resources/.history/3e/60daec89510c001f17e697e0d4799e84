@@ -1,0 +1,23 @@
+package com.inherit;
+
+public class InheritMain {
+
+	public static void main(String[] args) {
+
+		Employee e = new Employee("Srinidhi", "Hyderabad", 100, 34000);
+
+		handleObjects(e);
+		
+		Student s = new Student("Sudhir", "Chennai", 11, 98.2); // displayDetails() of Student class
+		handleObjects(s);
+		
+		String str ="";
+		
+		handleObjects(str);
+	}
+
+	static void handleObjects(Object p) {
+		System.out.println(p);
+	}
+
+}

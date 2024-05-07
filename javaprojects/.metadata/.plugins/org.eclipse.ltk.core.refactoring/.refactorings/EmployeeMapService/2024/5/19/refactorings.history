@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.map.provider.EmpMapService&apos; to &apos;EmployeeMapService&apos;&#x0D;&#x0A;- Original project: &apos;ServiceMapProvider&apos;&#x0D;&#x0A;- Original element: &apos;com.map.provider.EmpMapService&apos;&#x0D;&#x0A;- Renamed element: &apos;com.map.provider.EmployeeMapService&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;EmpMapService&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.map.provider{EmpMapService.java[EmpMapService" matchStrategy="1" name="EmployeeMapService" qualified="false" references="true" similarDeclarations="false" stamp="1714990532403" textual="false" version="1.0"/>
+</session>

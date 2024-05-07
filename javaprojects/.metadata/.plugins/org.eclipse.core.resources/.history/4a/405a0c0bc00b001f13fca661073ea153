@@ -1,0 +1,7 @@
+
+module service.db {
+  //exports com.db;
+  requires mod.service;
+  requires java.sql;
+  provides com.service.StudentService with com.db.StudentDbService;
+}

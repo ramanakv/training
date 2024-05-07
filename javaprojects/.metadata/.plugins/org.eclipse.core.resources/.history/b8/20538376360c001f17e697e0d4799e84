@@ -1,0 +1,7 @@
+package switchcaseproject;
+
+public enum Day {
+	
+	JANUARY, FEBRUARY, MARCH,APRIL,MA
+
+}

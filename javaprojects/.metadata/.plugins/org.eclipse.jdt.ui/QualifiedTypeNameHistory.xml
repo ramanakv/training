@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.pkg2.Utility2"/>
+    <fullyQualifiedTypeName name="com.pkg1.Utility1"/>
+    <fullyQualifiedTypeName name="com.pkg3.Utility3"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
+    <fullyQualifiedTypeName name="com.jdk8.MyClass1"/>
+    <fullyQualifiedTypeName name="com.map.provider.EmployeeMapService"/>
+    <fullyQualifiedTypeName name="com.entity.Student"/>
+    <fullyQualifiedTypeName name="com.rec.Student"/>
+    <fullyQualifiedTypeName name="com.service.EmployeeService"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="com.entity.Employee"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,28 @@
+package threadproject;
+
+public class Main {
+	 public static void main(String[] args) throws InterruptedException {
+
+     Thread pt = Thread.ofPlatform()
+               .start(()->System.out.println("Platform Thread : "+Thread.currentThread()));
+       System.out.println("------------------------------");
+
+       Thread vt = Thread.ofVirtual()
+               .start(
+            		   ()->{
+            			   System.out.println("Virtual Thread : "+Thread.currentThread());
+       						try {
+								Thread.sleep(1000);
+							} catch (InterruptedException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+       						
+       						System.out.println("Virtual Thread : "+Thread.currentThread());
+            		   });
+       pt.join();
+       vt.join();
+   }
+
+
+}

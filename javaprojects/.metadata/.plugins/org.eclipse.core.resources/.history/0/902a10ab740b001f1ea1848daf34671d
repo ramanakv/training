@@ -1,0 +1,5 @@
+module mod.main {
+
+	requires com.module1;
+
+}

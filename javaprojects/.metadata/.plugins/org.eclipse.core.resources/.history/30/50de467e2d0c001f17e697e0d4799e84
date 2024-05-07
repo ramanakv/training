@@ -1,0 +1,6 @@
+package com.sealed;
+
+public abstract sealed class Shape  permits Rectangle, Circle{
+	public abstract double getArea();
+	public abstract double getPerimeter();
+}

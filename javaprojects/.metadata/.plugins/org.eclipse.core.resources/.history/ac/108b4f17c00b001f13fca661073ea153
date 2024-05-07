@@ -1,0 +1,15 @@
+package com.db;
+
+import com.service.Student;
+import com.service.StudentService;
+
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        StudentService ser = new StudentDbService();
+        Student s = ser.getStudent(100);
+        System.out.println(s);
+    }
+}

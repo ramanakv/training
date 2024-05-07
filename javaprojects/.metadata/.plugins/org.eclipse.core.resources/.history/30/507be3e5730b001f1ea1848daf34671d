@@ -1,0 +1,5 @@
+module com.module1 {
+	exports com.pkg1 ;
+	requires  com.module2;
+
+}

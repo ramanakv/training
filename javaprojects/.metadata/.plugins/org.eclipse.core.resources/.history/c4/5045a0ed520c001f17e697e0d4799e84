@@ -1,0 +1,9 @@
+package com.inherit;
+
+public  class Square {
+	public Square() {
+		
+	}
+
+}
+
