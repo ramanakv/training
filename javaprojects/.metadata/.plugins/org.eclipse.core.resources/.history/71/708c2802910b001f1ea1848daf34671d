@@ -1,4 +1,0 @@
-module ServiceModule {
-	exports com.entity;
-	exports com.service;
-}

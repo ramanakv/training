@@ -1,3 +1,0 @@
-module com.module1 {
-	exports com.pkg1  to mod1.dummy;
-}

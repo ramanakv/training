@@ -1,6 +1,0 @@
-package com.rec;
-
-public record Student(int studentId, String name, float marks) {
-
-}
-

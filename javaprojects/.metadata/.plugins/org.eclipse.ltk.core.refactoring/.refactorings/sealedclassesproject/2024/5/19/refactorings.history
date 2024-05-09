@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy 4 elements to &apos;inheritanceproject/src/com.inherit&apos;&#x0D;&#x0A;- Original project: &apos;sealedclassesproject&apos;&#x0D;&#x0A;- Destination element: &apos;inheritanceproject/src/com.inherit&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.sealed.Shape.java&#x0D;&#x0A;     com.sealed.Circle.java&#x0D;&#x0A;     com.sealed.Square.java&#x0D;&#x0A;     com.sealed.Rectangle.java" description="Copy compilation units" destination="=inheritanceproject/src&lt;com.inherit" element1="/src&lt;com.sealed{Shape.java" element2="/src&lt;com.sealed{Circle.java" element3="/src&lt;com.sealed{Square.java" element4="/src&lt;com.sealed{Rectangle.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1715073282338" units="4" version="1.0"/>
-</session>

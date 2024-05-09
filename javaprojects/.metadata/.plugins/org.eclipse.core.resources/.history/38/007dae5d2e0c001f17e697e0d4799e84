@@ -1,6 +1,0 @@
-package com.sealed;
-
-public final class Square extends Rectangle {
-
-}
-
