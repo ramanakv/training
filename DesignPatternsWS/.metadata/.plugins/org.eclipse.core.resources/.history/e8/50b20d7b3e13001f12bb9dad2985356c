@@ -1,0 +1,6 @@
+package decoratorproject;
+
+public interface Behavior {
+	void describe();
+
+}

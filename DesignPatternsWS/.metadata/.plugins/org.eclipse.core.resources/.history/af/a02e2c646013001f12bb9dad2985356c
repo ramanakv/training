@@ -1,0 +1,18 @@
+package com.choresp;
+
+public class Currency500Dispenser implements CurrencyDispenser{
+
+	@Override
+	public void setNextDispenser(CurrencyDispenser next) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void dispense(Currency currency) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

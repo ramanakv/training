@@ -1,0 +1,11 @@
+package com.logger;
+
+public class SingletonMain {
+
+	public static void main(String[] args) {
+		Logger logger;
+
+
+	}
+
+}

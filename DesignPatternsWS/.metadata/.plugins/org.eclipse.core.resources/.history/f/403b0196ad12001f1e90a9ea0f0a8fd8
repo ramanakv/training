@@ -1,0 +1,9 @@
+package com.facade;
+
+import java.sql.Connection;
+
+public class ProductUtility {
+	
+	Connection connection;
+
+}

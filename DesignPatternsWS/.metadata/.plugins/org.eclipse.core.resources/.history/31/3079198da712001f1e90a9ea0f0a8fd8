@@ -1,0 +1,10 @@
+package com.proxy;
+
+public class CacheProxy {
+	
+	StateUtil util = new StateUtil();
+	
+	Map<String,String> cache = new HashMap<String,String>();
+	
+
+}

@@ -1,0 +1,5 @@
+package decoratorproject;
+
+public class Animal {
+
+}

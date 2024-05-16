@@ -1,0 +1,5 @@
+package statepatternproject;
+
+public class HighSpeedState {
+
+}

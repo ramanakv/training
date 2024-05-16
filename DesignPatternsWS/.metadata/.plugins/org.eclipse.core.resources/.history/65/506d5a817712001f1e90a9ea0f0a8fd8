@@ -1,0 +1,18 @@
+
+import com.factory.*;
+import com.product.*;
+
+public class AbstractFactoryMain {
+
+	public static void main(String[] args) {
+
+		CarFactory factory = CarFactory.getCarFactory("Toyota");
+		
+		Engine engine = factory.getEngine();
+		Transmission trans = factory.getTransmission();
+		
+		engine.makeEngine();
+		trans.makeTransmission();
+	}
+
+}

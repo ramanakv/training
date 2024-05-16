@@ -1,0 +1,40 @@
+package com.logger;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.time.LocalDateTime;
+
+public class Logger {
+
+	private static Logger logger = new Logger();
+
+	String fileName = "e:/log.txt";
+	PrintWriter writer;
+
+	public static Logger getInstance() {
+		return logger;
+	}
+
+	private Logger() {
+
+		try {
+			writer = new PrintWriter(fileName);
+			System.out.println("Logger created. Will log to " + fileName);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.exit(0);
+		}
+
+	}
+
+	void logMessage(String message) {
+
+		writer.println(LocalDateTime.now() + "  " + message);
+	}
+	
+	protected void finalize() {
+		writer.close();
+	}
+
+}

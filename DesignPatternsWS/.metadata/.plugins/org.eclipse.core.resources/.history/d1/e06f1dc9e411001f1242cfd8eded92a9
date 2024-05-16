@@ -1,0 +1,13 @@
+package com.factory;
+
+public class FactoryMain {
+
+	public static void main(String[] args) {
+
+		Currency c1 = CurrencyFactory.getCurrency("India");
+		System.out.println(c1.getSymbol());
+		System.out.println(c1.getDollarValue());
+
+	}
+
+}

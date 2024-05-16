@@ -1,0 +1,31 @@
+package com.builders;
+
+import com.product.Meal;
+
+public class IndianMealBuilder implements MealBuilder{
+
+	@Override
+	public void buildDrink() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void buildMainCourse() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void buildDessert() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Meal getMeal() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

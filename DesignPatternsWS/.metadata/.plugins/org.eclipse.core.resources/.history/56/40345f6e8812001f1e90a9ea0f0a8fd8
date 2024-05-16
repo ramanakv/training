@@ -1,0 +1,11 @@
+package com.builders;
+
+public interface MealBuilder {
+	
+	void buildDrink();
+	void buildMainCourse();
+	void buildDessert();
+	
+	Meal getMeal();
+
+}

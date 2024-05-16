@@ -1,0 +1,5 @@
+package commandpatternproject;
+
+public class AddCommand {
+
+}

@@ -1,0 +1,11 @@
+package statepatternproject;
+
+public class MediumSpeedState implements State {
+
+	@Override
+	public void nextStateAction(CeilingFan fan) {
+		System.out.println("Fan changed with high speed");
+		fan.setCurrentState(new HighSpeedState());	
+	}
+
+}

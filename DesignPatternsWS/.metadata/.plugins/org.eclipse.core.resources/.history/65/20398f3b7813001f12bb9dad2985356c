@@ -1,0 +1,18 @@
+package commandpatternproject;
+
+public class Accumulator {
+	
+	private int num=0;
+	
+	public void addOneValue(int x) {
+		num = num + x;
+	}
+
+	public void addTwoValues(int x, int y) {
+		num = num + x + y;
+	}
+	
+	public int getLatestValue() {
+		return num;
+	}
+}

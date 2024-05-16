@@ -1,0 +1,6 @@
+package com.strategy;
+
+public class CODPaymentStrategy implements PaymentStrategy {
+	
+
+}

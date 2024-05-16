@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="com.logger.Logger"/>
+    <fullyQualifiedTypeName name="com.factory.CurrencyFactory.SGDollar"/>
+    <fullyQualifiedTypeName name="com.factory.CurrencyFactory.JapaneseYen"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="com.factory.CurrencyFactory"/>
+    <fullyQualifiedTypeName name="com.product.Engine"/>
+    <fullyQualifiedTypeName name="com.product.Transmission"/>
+    <fullyQualifiedTypeName name="com.product.MarutiTransmission"/>
+    <fullyQualifiedTypeName name="com.factory.MarutiFactory"/>
+    <fullyQualifiedTypeName name="com.factory.ToyotaFactory"/>
+    <fullyQualifiedTypeName name="com.factory.CarFactory"/>
+    <fullyQualifiedTypeName name="com.product.MarutiEngine"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.lang.Cloneable"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.builders.MealBuilder"/>
+    <fullyQualifiedTypeName name="com.builders.IndianMealBuilder"/>
+    <fullyQualifiedTypeName name="com.director.MealDirector"/>
+    <fullyQualifiedTypeName name="com.builders.ChineseMealBuilder"/>
+    <fullyQualifiedTypeName name="javax.naming.ContextNotEmptyException"/>
+    <fullyQualifiedTypeName name="com.adapter.TempClassAdapter"/>
+    <fullyQualifiedTypeName name="com.adapter.TempAdapter"/>
+    <fullyQualifiedTypeName name="com.adapter.CelciusReporter"/>
+    <fullyQualifiedTypeName name="com.proxy.ComplexProxy"/>
+    <fullyQualifiedTypeName name="com.proxy.Complex"/>
+    <fullyQualifiedTypeName name="com.proxy.CacheProxy"/>
+    <fullyQualifiedTypeName name="com.facade.StoreData"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="com.facade.ProductUtility"/>
+    <fullyQualifiedTypeName name="com.facade.StoreUtil"/>
+    <fullyQualifiedTypeName name="com.facade.ProductFacade"/>
+    <fullyQualifiedTypeName name="com.facade.Product"/>
+</qualifiedTypeNameHistroy>

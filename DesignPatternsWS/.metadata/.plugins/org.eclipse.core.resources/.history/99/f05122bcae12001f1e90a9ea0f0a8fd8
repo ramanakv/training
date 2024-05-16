@@ -1,0 +1,17 @@
+package com.facade;
+
+public class StoreData {
+	
+	private int itemCode;
+	private int balance;
+	private int rol;
+	
+	public StoreData(int itemCode, int balance, int rol) {
+		super();
+		this.itemCode = itemCode;
+		this.balance = balance;
+		this.rol = rol;
+	}
+	
+
+}

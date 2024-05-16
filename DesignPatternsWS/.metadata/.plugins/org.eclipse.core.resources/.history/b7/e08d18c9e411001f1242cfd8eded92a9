@@ -1,0 +1,51 @@
+package com.factory;
+
+public class CurrencyFactory {
+
+	public static Currency getCurrency(String country) {
+		switch (country.toLowerCase()) {
+		case "india":
+			return new Rupee();
+		case "singapore":
+			return new SGDollar();
+		case "japan":
+			return new JapaneseYen();
+
+		default:
+			throw new IllegalArgumentException("No such currency ");
+		}
+
+	}
+
+	static private class Rupee implements Currency {
+		public String getSymbol() {
+			return "Rs";
+		}
+
+		public double getDollarValue() {
+			return 83.4;
+		}
+	}
+
+	static private class SGDollar implements Currency {
+
+		public String getSymbol() {
+			return "SGD";
+		}
+
+		public double getDollarValue() {
+			return 3.2;
+		}
+	}
+
+	static private class JapaneseYen implements Currency {
+
+		public String getSymbol() {
+			return "Yen";
+		}
+
+		public double getDollarValue() {
+			return 4.5;
+		}
+	}
+}

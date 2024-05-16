@@ -1,0 +1,27 @@
+
+import com.factory.*;
+import com.product.*;
+
+public class AbstractFactoryMain {
+
+	public static void main(String[] args) {
+
+		try {
+			CarFactory factory = CarFactory.getCarFactory("hello");
+
+			Engine engine = factory.getEngine();
+			Transmission trans = factory.getTransmission();
+
+			engine.makeEngine();
+			trans.makeTransmission();
+
+			MarutiEngine e = new MarutiEngine();
+
+		} catch (Exception e) {
+			System.out.print("Factory cannot be creted beacause ");
+			System.out.println(e.getMessage());
+		}
+
+	}
+
+}
