@@ -1,9 +1,0 @@
-package com.choresp;
-
-public interface CurrencyDispenser {
-	
-	void setNextDispenser(CurrencyDispenser next);
-	void dispense(Currency currency);
-}
-
-// create classes to dispense 500, 200,100

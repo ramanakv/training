@@ -1,5 +1,0 @@
-package com.choresp;
-
-public class Currency200Dispenser implements CurrencyDispenser{
-
-}

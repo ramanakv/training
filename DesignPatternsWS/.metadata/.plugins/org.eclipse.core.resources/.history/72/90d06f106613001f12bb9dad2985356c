@@ -1,6 +1,0 @@
-package observerpatternproject;
-
-public interface Observer {
-	void notifyChange();
-
-}
