@@ -1,0 +1,50 @@
+interfaces
+
+    contains all methods as abstract
+	interface is 100% abstraction
+	class has to implement  (not extends) interfaces
+	class should provide implementation for all the methods of interfaces
+	class can implement multiple interfaces
+	interface can have fully implemented methods also but they have to be declared as default(from java 8)
+	interfcae can also have static methods which can be called using interface name
+
+	public interface Sample{
+		void show();                           //implicitly public and abstract
+		int add(int x, int y);               // implicitly public and abstract
+		float val =100.0f;					// implicitly public final and static
+		
+	}
+	
+	public class Test implemets Sample{
+	  // it is a must to provide fully implemented methods of the interface. otherwise class becomes abstract
+	}
+	public Other implements Sample{
+	 int add(int x, int y){
+	        return x+y;
+	   }
+	   public void show(){
+	   // some code
+	   }
+	}
+	
+	Sample s = new Test();
+	s.show();     // call show() method of Test class
+		
+	Sample s = new Other();
+	s.show();   // call show() method of Other class
+	
+	
+	Abstract class													Interface
+	==============                                       			=========
+1. use extends 													use implements
+2. should have constructors								constructors are not allowed
+3. have fully implented methods 						all methods are abstract (default methods may be there)
+    and abstract  methods 
+4. can have any access for the methods			all methods are public
+5. can have data (both instance and static)		only static final variables are allowed
+6. class can extend only one class						class can implement multiple interfaces
+7. model for inheritence									model for a contract
+
+
+both abstract classes and interfaces can be used for polymorphism
+
