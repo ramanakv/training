@@ -1,6 +1,6 @@
 
 problems in Arrays 
-	size is static
+	size is constant
 	insert in between not possible
 	delete an element not possible
 	
