@@ -1,0 +1,20 @@
+
+Variable declaration:
+
+class X{
+     int abc;   <--   instance variable. 
+						 Available in every object. 
+						 initialized to defaul value
+						
+	 static int val; <-- 	class level variable. 
+								only one copy available irrespective of number of objects. 
+								automatically initalized to default value
+								can be referred using class name also
+	void show(){
+		int hello;  <-- local variable. 
+							visible only within the method. 
+							not initialized automatically. 
+							It is must to initialize this variable
+	}
+}
+
