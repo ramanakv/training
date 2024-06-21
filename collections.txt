@@ -103,7 +103,7 @@ TreeSet --> objects of class implementing Comaparable interface can be added
 
 ==========================================================================================
 Collections
-		class containing static methods to manipulate collections
+		class containing static methods to manipulate collection objects
 		
 Examples:
 		Collections.sort(list)
@@ -120,10 +120,10 @@ Keys cannot have duplicate values
 Key is used to search to get values
 
 Operations:
-	put()  <-- to add one entry 
-	get()  < search for a key and get values
-	remove()   <-- remove entry based on key
-	containsKey() <-- boolean to check whetehr a key exists
+	put(Key,value)  <-- to add one entry 
+	get(Key)  <-- search for a key and get values
+	remove(Key)   <-- remove entry based on key
+	containsKey(Key) <-- boolean to check whetehr a key exists
 	
 	Implementing classes
 			HashMap		 -->  uses hashCode of key for storing the element

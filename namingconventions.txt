@@ -1,0 +1,22 @@
+Naming conventions in Java
+----------------------------------
+
+class name / interface name: every word in the name should start with capital letter
+	Examples:  Employee,   ArrayList,  EmployeeData
+	
+variable names : every word except the first word should start with capital letter
+		Examples:
+		int	empId
+		int 	deptId
+		LocalDate 	paymentDate
+		
+method names: same as variables
+		getValue()
+		setValue()
+		setEmpId()
+
+Final variables (constants):  all Capital letters with underscore
+final double RATE_OF_INTEREST
+double PI
+
+package names:  capital letters not allowed
