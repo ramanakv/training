@@ -1,0 +1,50 @@
+
+repository
+	folder where git maintains the details of changes and also te files
+	contains folder .git
+	
+how to create repository
+	create a folder
+	git init       <- command to initialize the repository
+	
+view config
+	git config --list
+	
+adding name and email to config
+	git config --global user.name  "Ramana Reddy"
+	git config --global user.email  "ramana@gmail.com"
+	
+git stages
+	untracked 
+	tracked  <- in staging area
+	committed  <- committed area
+	
+	
+
+adding to staging area
+	git add file name
+	git add .   <- add all files from current directory down to sub directories
+	git add -all	<- all files in current directory
+	git add *.java 	<- all java files
+	
+remove files from staging area
+	git rm --cached filename
+	
+committing changes
+	git commit -m "message"
+	
+list of commits
+	git log 	<-  gives list of all commits with a hash value
+	
+Details of a particular commit
+	git show  hashvalue
+
+
+
+
+
+
+
+	
+
+	
