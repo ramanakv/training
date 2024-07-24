@@ -1,0 +1,28 @@
+abstract methods and classes
+------------------------------------
+abstract public void show(int x, int y);  <-- abstract method
+
+		incomplete method or method not implemented
+		we cannot call this method
+		any class having abstract method becomes abstract class
+		we cannot create object of abstract class (abstract class cannot be instantiated)
+		abstract class can be extended to create sub class
+		every sub class should override the abstract methods
+		
+abstract class Hello{
+    public void add(int x, int y){
+	     return x+y;
+	}
+	public void show(){
+	    System.out.println("Hello");
+	}
+	abstract public void doIt();
+}
+
+Hello h = new Hello();  <-- not possible
+
+h.doIt();   <-- problem here. what code it will execute????
+
+
+
+
