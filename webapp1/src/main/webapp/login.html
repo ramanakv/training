@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+<body>
+
+	<form action="/logintoapp">
+		<label for="fname">Use Name:</label><br> 
+		<input type="text"	id="name" name="name"><br> 
+		<label for="lname">	Password:</label><br>		
+		<input type="password" id="pwd" name="pwd"><br>
+		
+		Date of Joining: 
+		<input type="date" name='doj'> <br>
+		
+		About You: <br>
+		<textarea name="about" rows="10" cols="30">
+
+		</textarea>
+		
+		<br>
+		Country:
+		 <select  name='country'>
+			<option>India</option>
+			<option>UK</option>
+			<option>Japan</option>
+		</select> <br>
+		
+		<br>
+		<br> 
+		Skills: 
+		<select name='Skills' multiple>
+			<option>Java</option>
+			<option>C#</option>
+			<option>Spring</option>
+			<option>Spring Boot</option>
+			<option>Docker</option>
+		</select>
+		
+		<br>
+		<br> Select Gender <input type=Radio value=Male name='gender'>Male
+		<input type=Radio value=Female Name='gender'>Female 
+		<br>
+
+		Select Hobbies 
+		<input type=Checkbox>Cricket 
+		<input type=Checkbox> Reading 
+		<input type=Checkbox> Watching TV<br>
+		
+		<br> <input type="submit" value="Register">
+	</form>
+</body>
+</html>
