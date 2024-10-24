@@ -1,0 +1,17 @@
+package trg.chain;
+
+public class DispenserOf100Rupees implements CurrencyDispenser{
+	CurrencyDispenser nextDispenser;
+	
+	public DispenserOf100Rupees(CurrencyDispenser dispenser) {
+		this.nextDispenser = dispenser;
+	}
+	
+	@Override
+	public void dispense(int amount) {
+		int count = amount / 100;
+		
+		if(count != 0)
+			System.out.println("Dispensing "+ count + " 500 Rupee notes");
+	}
+}

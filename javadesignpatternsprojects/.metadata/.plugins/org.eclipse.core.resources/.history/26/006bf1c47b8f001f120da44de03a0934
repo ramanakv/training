@@ -1,0 +1,9 @@
+package trg.petterns.singletone;
+
+public class Logger {
+	
+	private Logger() {
+		
+	}
+
+}

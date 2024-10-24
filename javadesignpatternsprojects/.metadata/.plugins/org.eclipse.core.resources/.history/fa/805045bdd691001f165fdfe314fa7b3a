@@ -1,0 +1,10 @@
+package trg.state;
+
+public class HighSpeedState implements State {
+
+	@Override
+	public void changeAction() {
+		
+	}
+
+}

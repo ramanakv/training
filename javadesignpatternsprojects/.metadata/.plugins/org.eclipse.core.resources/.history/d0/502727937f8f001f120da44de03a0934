@@ -1,0 +1,11 @@
+package trg.petterns.singleton;
+
+public class Utility {
+	
+	public void doSomeThing() {
+		
+		Logger log = Logger.getLogger();
+		log.logMessage("message from Utility");
+	}
+
+}

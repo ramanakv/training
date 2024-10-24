@@ -1,0 +1,10 @@
+package trg.petterns.singletone;
+
+public class Utility {
+	
+	public void doSomeThing() {
+		
+		Logger log = getLo
+	}
+
+}

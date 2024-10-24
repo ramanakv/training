@@ -1,0 +1,5 @@
+package trg.strategy;
+
+public class ShoppingCart {
+
+}

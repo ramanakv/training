@@ -1,0 +1,67 @@
+package factorypatternproject;
+
+public class CountryFactory {
+
+	
+	private CountryFactory() {
+		
+	}
+	
+	public static Country getCountry(String code) {
+
+		switch (code) {
+
+		case "DEU":
+			return new Germany();
+		case "USA":
+			return new UnitedStates();
+		default:
+			return null;
+		}
+
+	}
+
+	private static class Germany implements Country {
+
+		@Override
+		public String getCountryCode() {
+			// TODO Auto-generated method stub
+			return "DEU";
+		}
+
+		@Override
+		public String getCurrency() {
+			// TODO Auto-generated method stub
+			return "Euro";
+		}
+
+		@Override
+		public double getConversionRate() {
+			// TODO Auto-generated method stub
+			return 90.98;
+		}
+
+	}
+
+	private static class UnitedStates implements Country {
+
+		@Override
+		public String getCountryCode() {
+			return "USA";
+		}
+
+		@Override
+		public String getCurrency() {
+
+			return "Dollars";
+		}
+
+		@Override
+		public double getConversionRate() {
+
+			return 84.08;
+		}
+
+	}
+
+}

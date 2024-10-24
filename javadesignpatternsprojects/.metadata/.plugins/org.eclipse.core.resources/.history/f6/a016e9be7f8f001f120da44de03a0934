@@ -1,0 +1,19 @@
+package trg.petterns.singleton;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Logger log1 = Logger.getLogger();
+		log1.logMessage("this is first message");
+		
+		Utility util = new Utility();
+		util.doSomeThing();
+		
+		
+		Logger log2 = Logger.getLogger();
+		
+		log2.logMessage("this is another message from"+ Main.class.getName());
+	}
+
+}

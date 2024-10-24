@@ -1,0 +1,5 @@
+package trg.adapter;
+
+public interface TempReporter {
+
+}

@@ -1,0 +1,12 @@
+package trg.strategy;
+
+public class StrategyMain {
+
+	public static void main(String[] args) {
+		ShoppingCart cart = new ShoppingCart();
+		
+		cart.addToCart(new Product(11."laptop",1,23000));
+		
+	}
+
+}

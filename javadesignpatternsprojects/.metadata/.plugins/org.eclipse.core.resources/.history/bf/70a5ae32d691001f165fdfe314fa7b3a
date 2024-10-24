@@ -1,0 +1,5 @@
+package trg.state;
+
+public class FanRegulator {
+
+}
