@@ -1,9 +1,0 @@
-package trg.petterns.singletone;
-
-public class Main {
-
-	public static void main(String[] args) {
-		Logger log1 = new logger();
-	}
-
-}

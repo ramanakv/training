@@ -1,5 +1,0 @@
-package trg.chain;
-
-public interface CurrencyDispenser {
-
-}
