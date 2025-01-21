@@ -3,7 +3,7 @@ using namespace std;
 
 class Array
 {
-    int *p;
+    int *p;  //12412
     int size;
 
 public:
@@ -18,6 +18,7 @@ public:
     }
     void fill();
     void show();
+    Array(Array &a);
 };
 
 void Array::fill()
@@ -37,9 +38,21 @@ void Array::show()
     cout << endl;
 }
 
+Array::Array(Array &a){
+    this->size = a.size;
+    p=new int[size];
+    for(int i=0;i<size;i++){
+        p[i] = a.p[i];
+    }
+}
+
 int main()
 {
     Array a(5);
     a.fill();
+    a.show();
+
+    Array b = a;
+
     a.show();
 }
