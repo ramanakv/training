@@ -77,7 +77,7 @@ stack frames:
 		frame number <-- give details of frame with the given number
 		info args, info locals apply to the current frame
 		navigating in the frames: 
-			up <-- goes to next frame
+			up   <-- goes to next frame
 			down <-- goes to previous frame
 		
 		

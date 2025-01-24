@@ -1,0 +1,123 @@
+intentional debugging
+	series of commands can be issued while starting gdb (using -ex)
+	example: 
+		gdb -ex 'br 21' -ex 'run' -ex 'info locals' programname
+
+storing commands in a file:
+	multiple gdb commands can be stored in a file 
+	to run those commands use: source filename
+	
+saving breakpoints to a file
+	save breakpoints filename
+	to use these breakpoints use 'source filename'
+	
+setting conditions to existing breakpoint
+	we can set condition to existing breakpoint
+	
+	condition breakpointnumber expression
+		example: condition 2 x == 6   <-- 2 is breakpoint number. Halts only when x == 2
+	to remove the condition on the breakpoint
+		condition breakpointnumber
+		
+Working with macros
+macros
+	look like functions but they are not. In the code the macro is expanded 
+	
+#define PI 3.12679  // defining constants
+
+#define add(a,b) a+b     <-- this is macro definition
+#define max(a,b) a > b? a:b  <-- this is anothe macro
+
+debugging macros:
+	to debug macro code has to be compiled  with -gdwarf-2  and -g3
+	example:
+		gcc -gdwarf-2  -g3  -o macrospgm macrospgm.c
+		
+	gdb to be started with -nw option
+	issue list command which is required to set current position
+	
+	to see macros:
+		info macro macroname
+	macro expand:
+		macro expand expression
+		example:  macro expand ADD(23,45)
+	
+debugging running program:
+	we need to attach the process to gdb
+	processid can be seen  with ps -a  command in a different window
+	run gdb with sudo option as it needs super user to attach a process
+		sudo gdb
+	attach a process in gdb:
+		atttach processid  <-- this will debug the program with the processid
+	to detach the process
+		detach  <-- this will detach already attached process
+		
+postmortem debugging:
+	debugging can be done on core dump generated through abnormal termination
+	core dump is program data status in the memory
+	core dump may happen when --
+		assert fails
+		accessing invalid pointer etc
+		
+	default coredump location -> /var/lib/systemd/coredump	
+	to capture coredump in current directory: 
+		coredumpctl -o dumpfilename dump program
+		if coredumpctl not available, install systemd-coredump
+			sudo apt install systemd-coredump
+	
+	debug using coredump:
+		start gdb normally
+			gdb programname <-- program required for accessing symbol table
+		inside gdb
+			target core coredumpfile
+			analyze the code with normal gdb commands like where, frame, info etc
+			
+separating symbol file:
+	when code is handed over to the client, it should be executable without symbol table
+	after compiling with -g option we can remove symbol table from executable
+	we can extract the symbol table and keep with us
+	
+	commands to do this:
+		extract symbol table:
+			objcopy --only-keep-debug program  debugfile   <-- debugfile contains symbol table
+			
+		remove symbol table from the program:
+			objcopy --strip-debug program   <-- now program will not have symbol table
+			
+	to debug the program without symbol table, symbol table should be loaded from debugfile
+		start gdb normally:
+			gdb program
+		load 
+		 <-- symbols are loaded from debugfile
+	
+	proceed with nornmal debug commands
+	
+Remote debugging:
+	debug a program (without symbol table) running on a remote machine
+	symbol-file should be on local machine
+	
+	remote machine:
+		gdbserver ipaddress:portnumber program
+		example:
+			gdbserver 127.0.0.1:1234 addnums  <-- addnums is the program without symbol table
+			
+	local machine:
+		start gdb normally
+		issue the commands in gdb:
+			target remote ipaddress:portnumber
+			example:
+				target remote 127.0.0.1:1234
+				
+			symbol-file debugfile  <-- debugfile is what is generated with objcopy --only-keep-debug 
+			
+		proceed with nornmal debug commands
+		
+		
+		
+		
+		
+		 
+	
+			
+
+
