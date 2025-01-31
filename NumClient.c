@@ -2,13 +2,15 @@
 #include <stdlib.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
-#include<string.h>
-#include<unistd.h>
+#include <string.h>
+#include <unistd.h>
+// client program to send int array to the server and get sum from server
 int main()
 {
     int clientfd;
     struct sockaddr_in server_address;
     int server_socket;
+    int array[] = {1,2,3,4,5,6,7,8,9,10}; // 10 elements
 
     char *message = "Hello server";
     server_socket = socket(AF_INET, SOCK_STREAM, 0);
@@ -35,18 +37,15 @@ int main()
         printf("connect failed\n");
         exit(0);
     }
- // perform input / output here
-    int length = strlen(message);
-    if(send(server_socket, &length, sizeof(int), 0) < 0){
-        printf("Sending length failed\n");
-        exit(0);
-    }
-    if(send(server_socket, message, length, 0)<0){
-        printf("message send failed\n");
-        exit(0);
-    }
-    printf("Message sent to the server\n");
-   
+    // perform input / output here
+    int length = 10;
+    write(server_socket, &length, sizeof(int));
+    write(server_socket, array, length*sizeof(int) );
+    printf("Array sent to the server\n");
+
+    int sum;
+    read(server_socket, &sum, sizeof(int));
+    printf("Sum of numbers received from server: %d\n", sum);
     close(server_socket);
     return 0;
 }

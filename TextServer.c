@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
+#include <unistd.h>
+
 int main()
 {
   struct sockaddr_in address;
@@ -24,7 +26,7 @@ int main()
   address.sin_port = htons(2345);
 
   // bind the serverfd with this address
-  int x = bind(serverfd, (struct sockadd *)&address, sizeof(address));
+  int x = bind(serverfd, (struct sockaddr *)&address, sizeof(address));
 
   if (x < 0)
   {
@@ -38,16 +40,28 @@ int main()
     printf("Unable to listen\n");
     exit(0);
   }
+  printf("Server listening on port number 2345\n");
   // accept connection by calling accept() function which returns client socket id
-  client_socket = accept(serverfd, (struct sockaddr *)&address, sizeof(address));
+  int len = sizeof(address);
+  client_socket = accept(serverfd, (struct sockaddr *)&address, &len);
+  
 
   if (client_socket < 0)
   {
-    printf("client socket create failure\n");
+    
+    perror("client socket create failure ");
     exit(0);
   }
 
 // perform input / output here
+
+int length;
+recv(client_socket,&length,sizeof(int),0);
+char *msg = malloc((length+1) * sizeof(char));
+recv(client_socket,msg, length,0);
+msg[length] ='\0';
+printf("Message received from client\n");
+printf("%s\n",msg);
 
 close(client_socket);
 close(serverfd);
